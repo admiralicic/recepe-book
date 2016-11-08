@@ -7,10 +7,12 @@ import { Recipe } from '../recipe';
 })
 export class RecipeListComponent implements OnInit {
 
-    recipes: Recipe[] = []
+    recipes: Recipe[] = [
+        new Recipe('Schnitzel', 'Very tasty', 'http://www.thecherryshare.com/pictures/2718710wienerschnitzel.jpg', []),
+        new Recipe('Summer Salad', 'Okayish', 'http://ohmyveggies.com/wp-content/uploads/2013/06/the_perfect_summer_salad.jpg', [])
+    ];
     @Output() recipeSelected = new EventEmitter<Recipe>();
 
-    recipe = new Recipe('Dummy', 'Dummy', 'http://www.themarysue.com/wp-content/uploads/2012/03/CrashDummies.jpg')
 
     constructor() { }
 
